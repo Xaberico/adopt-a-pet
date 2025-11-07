@@ -1,0 +1,162 @@
+/* -------------------------------------------------------
+   ESTILOS GENERALES
+------------------------------------------------------- */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#carouselExampleAutoplaying, #carouselExampleAutoplaying img,
+#carousel-inner, #banner_home, #banner_home img,
+article, aside, .list-group-item, .pet_card, #bloque2, #bloque2 .btn {
+  margin: 20px;
+}
+
+
+/* Variables globales */
+:root {
+  --background-color-components: #e0f8f9;
+  --nav-color: #ebffff;
+  --border-radius: var(--border-radius)
+}
+
+/* -------------------------------------------------------
+   NAVEGACIÓN
+------------------------------------------------------- */
+nav {
+  background-color: var(--nav-color);
+}
+
+/* -------------------------------------------------------
+   CAROUSEL
+------------------------------------------------------- */
+#carouselExampleAutoplaying {
+  background-color: var(--background-color-components);
+  height: 50vh;
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
+
+#carouselExampleAutoplaying img {
+  border-radius: var(--border-radius);
+  height: 250px;
+}
+
+#carousel-inner {
+  border-radius: var(--border-radius)
+}
+
+/* -------------------------------------------------------
+   LAYOUT PRINCIPAL
+------------------------------------------------------- */
+main {
+  display: flex;
+  flex-direction: column; /* define el flujo principal */
+  justify-content: space-around;
+  background-color: #d4f1f2;
+}
+
+/* Contenedor de bloques principales */
+#bloque1 {
+  display: flex;
+  flex-direction: row;
+}
+
+/* -------------------------------------------------------
+   BLOQUE 1 - BANNER HOME
+------------------------------------------------------- */
+#banner_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-components);
+  width: 75vw;
+  border-radius: var(--border-radius);
+}
+
+#banner_home img {
+  border-radius: var(--border-radius);
+  height: 50vh;
+}
+
+/* -------------------------------------------------------
+   BLOQUE 2 - SECCIÓN INFERIOR
+------------------------------------------------------- */
+#bloque2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-components);
+  border-radius: var(--border-radius);
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* -------------------------------------------------------
+   ARTÍCULO Y BARRA LATERAL
+------------------------------------------------------- */
+article,
+aside {
+  background-color: var(--background-color-components);
+  padding: 20px;
+  border-radius: var(--border-radius)
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------------
+   PIE DE PÁGINA
+------------------------------------------------------- */
+footer {
+  background-color: #021427;
+  width: 100%;
+  text-align: left;
+  padding: 10px 10px 16px;
+  color: white;
+  font-size: 10px;
+  z-index: 2000;
+  position: relative;
+  bottom: 0;
+}
+
+.list-group-item {
+  background-color: var(--background-color-components);
+  margin-bottom: 10px;
+  border-radius: var(--border-radius)
+}
+
+/* -------------------------------------------------------
+   LISTADO DE MASCOTAS
+------------------------------------------------------- */
+.pet_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pet_card {
+  background-color: var(--background-color-components);
+  margin: 5px;
+  border-radius: var(--border-radius);
+  padding: 5px;
+  text-align: center;
+}
+
+.pet_card img {
+  border-radius: var(--border-radius);
+  height: 150px;
+}
+
+/* -------------------------------------------------------
+   UTILIDADES
+------------------------------------------------------- */
+.d-flex {
+  display: flex;
+  width: 100%;
+}
