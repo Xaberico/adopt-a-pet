@@ -39,14 +39,18 @@ main {
   align-items: center;
   background-color: var(--background-color-components);
   border-radius: var(--border-radius);
-  margin: 20px;
+  margin: 20px auto;
   padding: 10px;
+  width: 95%;
+  max-width: 1200px;
 }
 
 #banner_home img {
   border-radius: var(--border-radius);
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 /* -------------------------------------------------------
@@ -56,19 +60,20 @@ main {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin: 20px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1200px;
 }
 
 /* -------------------------------------------------------
    COMPONENTES COMUNES
 ------------------------------------------------------- */
 #carouselExampleAutoplaying,
-article,
-aside,
-.list-group-item,
 .pet_card,
 #bloque2 {
-  margin: 20px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1200px;
 }
 
 /* -------------------------------------------------------
@@ -89,12 +94,20 @@ aside,
 /* -------------------------------------------------------
    ARTÍCULO Y BARRA LATERAL
 ------------------------------------------------------- */
-article,
+article {
+  background-color: var(--background-color-components);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  flex: 2;
+  margin: 0;
+}
+
 aside {
   background-color: var(--background-color-components);
   padding: 20px;
   border-radius: var(--border-radius);
   flex: 1;
+  margin: 0;
 }
 
 /* -------------------------------------------------------
@@ -125,7 +138,9 @@ aside {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin: 20px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1200px;
 }
 
 .pet_card {
@@ -135,6 +150,7 @@ aside {
   text-align: center;
   flex: 1 1 300px;
   max-width: 350px;
+  margin: 0;
 }
 
 .pet_card img {
@@ -161,6 +177,8 @@ footer {
   background-color: var(--background-color-components);
   margin-bottom: 10px;
   border-radius: var(--border-radius);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* -------------------------------------------------------
@@ -169,71 +187,70 @@ footer {
 
 /* Tablets */
 @media (max-width: 1024px) {
-  #bloque1 {
-    flex-direction: column;
-  }
-  
   .pet_card {
     flex: 1 1 250px;
   }
 }
 
-/* Móviles */
+/* Móviles - Solo aquí Noticias va debajo */
 @media (max-width: 768px) {
   #bloque1 {
-    margin: 10px;
-    gap: 10px;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 95%;
   }
 
-  #banner_home,
-  #carouselExampleAutoplaying,
-  article,
-  aside,
-  .pet_card,
-  #bloque2 {
-    margin: 10px;
+  #banner_home {
+    margin: 10px auto;
+    padding: 5px;
+  }
+
+  #banner_home img {
+    max-height: 200px;
+  }
+
+  article, aside {
+    padding: 15px;
+    margin: 0;
   }
 
   .pet_list {
-    margin: 10px;
+    margin: 10px auto;
     gap: 10px;
   }
 
   .pet_card {
     flex: 1 1 100%;
     max-width: none;
+    margin: 0;
   }
 
   #bloque2 .btn {
     max-width: none;
   }
 
-  /* Ajustes para la navegación */
-  .navbar-collapse {
-    margin-top: 15px;
-  }
-
-  .d-flex {
-    flex-direction: column;
-  }
-
-  .d-flex input {
-    margin-bottom: 10px;
+  .list-group-item {
+    padding: 10px 8px;
+    font-size: 0.9rem;
   }
 }
 
 /* Pantallas muy pequeñas */
 @media (max-width: 480px) {
-  article,
-  aside {
-    padding: 15px;
+  #banner_home img {
+    max-height: 150px;
+  }
+
+  article, aside {
+    padding: 12px;
   }
 
   h2 {
     font-size: 1.3rem;
   }
 
-  .pet_card {
-    padding: 10px;
+  .list-group-item {
+    font-size: 0.85rem;
+    padding: 8px 6px;
   }
 }
