@@ -2,7 +2,19 @@ function CarouselItem({ img_path, nombre, active }) {
     const src = `${import.meta.env.BASE_URL}${String(img_path).replace(/^\//, '')}`;
     return (
         <div className={"carousel-item" + (active ? " active" : "")}>
-            <img src={src} className="d-block mx-auto img-fluid" alt={nombre} />
+            <div className="d-flex justify-content-center">
+                <img 
+                    src={src} 
+                    className="img-fluid" 
+                    alt={nombre}
+                    style={{ 
+                        width: '100%', 
+                        maxWidth: '600px', 
+                        height: '300px', 
+                        objectFit: 'cover' 
+                    }}
+                />
+            </div>
         </div>
     );
 }

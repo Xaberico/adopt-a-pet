@@ -1,10 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import Carousel from '../components/Carousel';
 import Article from '../components/Article';
 import Aside from '../components/Aside';
 import Boton from '../components/Boton';
 
 function Home() {
+    const navigate = useNavigate();
     return (
+
         <div>
             <picture id="banner_home">
                 <img src={`${import.meta.env.BASE_URL}home_banner.jpg`} alt="Banner de adopción de mascotas" />
@@ -37,7 +40,7 @@ function Home() {
                     texto="Donar alimentos"
                     className="btn btn-primary"
                     onClick={() => {
-                        window.location.href = "/donaciones";
+                        navigate('/donaciones');
                     }}
                 />
                 <Boton
@@ -49,7 +52,7 @@ function Home() {
                     texto="Apoyar Campañas"
                     className="btn btn-primary"
                     onClick={() => {
-                        window.location.href = "/donaciones";
+                        navigate('/donaciones');
                     }}
                 />
             </div>
