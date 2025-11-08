@@ -10,6 +10,10 @@ function Navbar() {
         { texto: "Contacto", ruta: "/contacto" },
     ];
 
+    /**
+    * Maneja la acción de búsqueda en la barra de navegación
+    * @param {Event} e - Evento del formulario
+    */
     const onSearch = (e) => {
         e.preventDefault();
         console.log("Buscar clickeado!");
@@ -18,6 +22,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
+                {/* Logo de la aplicación */}
                 <Link to="/" className="navbar-brand">
                     <img
                         src={`${import.meta.env.BASE_URL}logo.png`}
@@ -26,6 +31,7 @@ function Navbar() {
                     />
                 </Link>
 
+                {/* Botón hamburguesa para móviles */}
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -38,7 +44,9 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
+                {/* Contenido colapsable del navbar */}
                 <div className="collapse navbar-collapse" id="navbarNav">
+                    {/* Lista de navegación generada dinámicamente */}
                     <Lista
                         lista={itemsNav}
                         classNameUl="navbar-nav me-auto"
@@ -50,6 +58,7 @@ function Navbar() {
                         )}
                     />
 
+                    {/* Formulario de búsqueda */}
                     <form className="d-flex" role="search">
                         <input
                             className="form-control me-2"
